@@ -10,9 +10,9 @@
 				instance.on("complete", this.handleComplete, this);
 			}
 		
-			createjs.Sound.alternateExtensions = ["mp3", "ogg"];
+			createjs.Sound.alternateExtensions = ["wav"];
 			createjs.Sound.on("fileload", this.loadHandler, this);
-			createjs.Sound.registerSound("sound/rain.wav", "sound");
+			createjs.Sound.registerSound("sound/rain.ogg", "sound");
 		</script>
 	</head>
 	<body>
