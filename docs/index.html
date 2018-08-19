@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+		<script>
+			function loadHandler(event) 
+			{
+				var props = new createjs.PlayPropsConfig().set({interrupt: createjs.Sound.INTERRUPT_ANY, loop: -1, volume: 0.1});
+				var instance = createjs.Sound.play("sound", props);  
+				instance.on("complete", this.handleComplete, this);
+				
+			}
+		
+			createjs.Sound.alternateExtensions = ["mp3", "ogg"];
+			createjs.Sound.on("fileload", this.loadHandler, this);
+			createjs.Sound.registerSound("sound/rain.wav", "sound");
+		</script>
+	</head>
+	<body>
+
+	
+	</body>
+</html>
