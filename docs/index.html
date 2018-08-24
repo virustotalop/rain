@@ -20,17 +20,30 @@
 			//Set master volume to 0.1
 			createjs.Sound.volume = 0.1;
 		</script>
+		<script>
+			function youtube()
+			{
+				var div = document.getElementById("youtube");
+				div.innerHTML = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+			}
+		</script>
 	</head>
 	<body>
-		<div class="content">
-				<div class="control">
-					<i class="fas fa-play"></i>
-				</div>
-				<div class="slidecontainer">
-					<input type="range" min="0" max="100" value="10" class="slider" id="volumeSlider">
-				</div>
-				
+		<div class="top-bar">
+			<input type="range" min="0" max="100" value="10" class="slider" id="volumeSlider">
+			<span style="color:Red;">
+				<i id="youtube-button" onclick="youtube()" class="fab fa-youtube fa-lg"></i>
+			</span>
 		</div>
+		
+		<div style="text-align:center" class="control">
+			<i class="fas fa-play fa-4x"></i>
+		</div>
+		</br>
+		</br>
+		
+		<div style="text-align:center" id="youtube"></div>
+		
 		<!--Master volume control-->
 		<script>
 			document.getElementById("volumeSlider").oninput = function() 
