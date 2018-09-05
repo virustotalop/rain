@@ -1,0 +1,57 @@
+body {
+    background-color: #000;
+    margin: 0;
+}
+
+.top-bar {
+    position: absolute;
+    width: 100%;
+}
+
+#slider {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+}
+
+#youtube-button {
+    color: red;
+    -webkit-transition: color 0.25s;
+    -moz-transition: color 0.25s;
+    -o-transition: color 0.25s;
+    transition: color 0.25s;
+}
+
+#youtube-button:hover {
+    color: white;
+}
+
+#control {
+    position: fixed;
+    top: 2em;
+    left: 50%;
+}
+
+#control span {
+    position: relative;
+    left: -50%;
+    color: white;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+#control span:hover {
+    color: red;
+}
+
+#youtube {
+    width: 100%;
+    height: 100%;
+}
+
+#youtube iframe {
+    width: 100%;
+    height: 100%
+}
