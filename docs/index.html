@@ -9,7 +9,7 @@
 			{
 				//Volume is set to 1.0 so that the master volume can control the volume of the clip fully
 				var props = new createjs.PlayPropsConfig().set({interrupt: createjs.Sound.INTERRUPT_ANY, loop: -1, volume: 1.0});
-				var instance = createjs.Sound.play("sound", props);  
+				instance = createjs.Sound.play("sound", props);  
 				instance.on("complete", this.handleComplete, this);
 			}
 		
@@ -32,14 +32,14 @@
 			{
 				var control = document.getElementById("control");
 				control.innerHTML = "<span> <i onclick=\"pause()\" class=\"fas fa-play fa-4x\"></i></span>";
-				createjs.Sound.play();
+				instance.paused = false;
 			}
 			
 			function pause()
 			{
 				var control = document.getElementById("control");
 				control.innerHTML = "<span> <i onclick=\"play()\" class=\"fas fa-pause fa-4x\"></i></span>";
-				createjs.Sound.pause();
+				instance.paused = true;
 			}
 		</script>
 	</head>
