@@ -27,6 +27,21 @@
 				div.innerHTML = "<iframe src=\"https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
 			}
 		</script>
+		<script>
+			function play()
+			{
+				var control = document.getElementById("control");
+				control.innerHTML = "<span> <i onclick=\"pause()\" class=\"fas fa-play fa-4x\"></i></span>";
+				createjs.Sound.play();
+			}
+			
+			function pause()
+			{
+				var control = document.getElementById("control");
+				control.innerHTML = "<span> <i onclick=\"play()\" class=\"fas fa-pause fa-4x\"></i></span>";
+				createjs.Sound.pause();
+			}
+		</script>
 	</head>
 	<body>
 		<div class="top-bar">
@@ -38,7 +53,7 @@
 			</div>
 			<div id="control">
 				<span>
-					<i class="fas fa-play fa-4x"></i>
+					<i onclick="pause()" class="fas fa-play fa-4x"></i>
 				</span>
 			</div>
 		</div>
