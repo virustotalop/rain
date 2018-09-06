@@ -31,14 +31,14 @@
 			function play()
 			{
 				var control = document.getElementById("control");
-				control.innerHTML = "<span> <i onclick=\"pause()\" class=\"fas fa-play fa-4x\"></i></span>";
+				control.innerHTML = "<span> <i onclick=\"play()\" class=\"fas fa-pause fa-4x\"></i></span>";
 				instance.paused = false;
 			}
 			
 			function pause()
 			{
 				var control = document.getElementById("control");
-				control.innerHTML = "<span> <i onclick=\"play()\" class=\"fas fa-pause fa-4x\"></i></span>";
+				control.innerHTML = "<span> <i onclick=\"pause()\" class=\"fas fa-play fa-4x\"></i></span>";
 				instance.paused = true;
 			}
 		</script>
@@ -53,7 +53,7 @@
 			</div>
 			<div id="control">
 				<span>
-					<i onclick="pause()" class="fas fa-play fa-4x"></i>
+					<i onclick="pause()" class="fas fa-pause fa-4x"></i>
 				</span>
 			</div>
 		</div>
